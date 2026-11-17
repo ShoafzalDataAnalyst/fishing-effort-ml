@@ -1,0 +1,15 @@
+# raw data is too large for Git; keep the folder but not its contents
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# local config / OS files
+.env
+.DS_Store
+Thumbs.db
