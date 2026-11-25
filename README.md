@@ -1,7 +1,6 @@
 # Global Fishing Effort 2024: an end-to-end ML pipeline
 
 Machine Learning and Data Analytics (6COSC017C-n), Coursework 1.
-Student ID: 18503
 
 ## Project goal
 
