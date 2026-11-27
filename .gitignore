@@ -9,7 +9,10 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 
+
 # local config / OS files
 .env
 .DS_Store
 Thumbs.db
+
+data/processed/*.csv
