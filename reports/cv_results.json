@@ -1,0 +1,194 @@
+{
+  "A_baseline_cv": {
+    "Dummy (prior)": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.3079,
+      "f1": 0.0,
+      "bal_acc": 0.5,
+      "roc_auc_sd": 0.0,
+      "pr_auc_sd": 0.0275,
+      "f1_sd": 0.0,
+      "bal_acc_sd": 0.0,
+      "fit_s": 0.9
+    },
+    "Logistic regression": {
+      "roc_auc": 0.7049,
+      "pr_auc": 0.4697,
+      "f1": 0.5399,
+      "bal_acc": 0.654,
+      "roc_auc_sd": 0.0262,
+      "pr_auc_sd": 0.0463,
+      "f1_sd": 0.0564,
+      "bal_acc_sd": 0.0276,
+      "fit_s": 1.2
+    },
+    "Random forest": {
+      "roc_auc": 0.7224,
+      "pr_auc": 0.5056,
+      "f1": 0.3186,
+      "bal_acc": 0.5755,
+      "roc_auc_sd": 0.0152,
+      "pr_auc_sd": 0.037,
+      "f1_sd": 0.0429,
+      "bal_acc_sd": 0.0144,
+      "fit_s": 4.5
+    },
+    "Hist gradient boosting": {
+      "roc_auc": 0.7249,
+      "pr_auc": 0.5168,
+      "f1": 0.3481,
+      "bal_acc": 0.5869,
+      "roc_auc_sd": 0.0158,
+      "pr_auc_sd": 0.0421,
+      "f1_sd": 0.0626,
+      "bal_acc_sd": 0.0207,
+      "fit_s": 4.3
+    }
+  },
+  "A_tuned": {
+    "Hist gradient boosting": {
+      "cv_pr_auc": 0.5174667702004658,
+      "params": {
+        "model__l2_regularization": 0.004207988669606638,
+        "model__learning_rate": 0.04296509486733454,
+        "model__max_iter": 187.0,
+        "model__max_leaf_nodes": 38.0,
+        "model__min_samples_leaf": 150.0
+      }
+    },
+    "Random forest": {
+      "cv_pr_auc": 0.5186805647427235,
+      "params": {
+        "model__max_depth": 12.0,
+        "model__max_features": 0.5,
+        "model__min_samples_leaf": 33.0,
+        "model__n_estimators": 114.0
+      }
+    }
+  },
+  "A_activity_ablation": {
+    "Set A (location, season, gear, flag, vessel)": {
+      "roc_auc": 0.729,
+      "pr_auc": 0.519,
+      "f1": 0.293,
+      "bal_acc": 0.57
+    },
+    "Set B (A + hours, mmsi_present)": {
+      "roc_auc": 0.899,
+      "pr_auc": 0.799,
+      "f1": 0.737,
+      "bal_acc": 0.81
+    }
+  },
+  "B_baseline_cv": {
+    "Dummy (mean)": {
+      "rmse": 1.3615,
+      "mae": 1.1133,
+      "r2": -0.0346,
+      "rmse_sd": 0.0949,
+      "mae_sd": 0.0516,
+      "r2_sd": 0.0219,
+      "fit_s": 0.7
+    },
+    "Ridge regression": {
+      "rmse": 1.2766,
+      "mae": 1.0354,
+      "r2": 0.0874,
+      "rmse_sd": 0.0551,
+      "mae_sd": 0.0432,
+      "r2_sd": 0.0342,
+      "fit_s": 0.8
+    },
+    "Random forest": {
+      "rmse": 1.268,
+      "mae": 1.0142,
+      "r2": 0.0991,
+      "rmse_sd": 0.0507,
+      "mae_sd": 0.041,
+      "r2_sd": 0.0404,
+      "fit_s": 8.9
+    },
+    "Hist gradient boosting": {
+      "rmse": 1.2461,
+      "mae": 1.0044,
+      "r2": 0.1304,
+      "rmse_sd": 0.0534,
+      "mae_sd": 0.0418,
+      "r2_sd": 0.0332,
+      "fit_s": 3.0
+    }
+  },
+  "B_tuned": {
+    "Hist gradient boosting": {
+      "cv_rmse": 1.2417846816031224
+    },
+    "Random forest": {
+      "cv_rmse": 1.2383217808519342
+    }
+  },
+  "B_activity_ablation": {
+    "Set A": {
+      "rmse": 1.238,
+      "mae": 0.999,
+      "r2": 0.141
+    },
+    "Set B (+ hours, mmsi_present)": {
+      "rmse": 0.682,
+      "mae": 0.458,
+      "r2": 0.739
+    }
+  },
+  "C_baseline_cv": {
+    "Dummy (most frequent)": {
+      "macro_f1": 0.0055,
+      "macro_f1_sd": 0.0022,
+      "accuracy": 0.0462,
+      "fit_s": 0.6
+    },
+    "Logistic regression": {
+      "macro_f1": 0.2752,
+      "macro_f1_sd": 0.0384,
+      "accuracy": 0.3296,
+      "fit_s": 5.1
+    },
+    "Random forest": {
+      "macro_f1": 0.3661,
+      "macro_f1_sd": 0.0118,
+      "accuracy": 0.3978,
+      "fit_s": 3.8
+    },
+    "Hist gradient boosting": {
+      "macro_f1": 0.3468,
+      "macro_f1_sd": 0.0225,
+      "accuracy": 0.3759,
+      "fit_s": 28.4
+    }
+  },
+  "C_tuned": {
+    "Hist gradient boosting": {
+      "cv_macro_f1": 0.3582158649694211
+    },
+    "Random forest": {
+      "cv_macro_f1": 0.3641413615360373
+    }
+  },
+  "D_silhouette": {
+    "3": {
+      "silhouette": 0.3815,
+      "inertia": 41489.3617
+    },
+    "4": {
+      "silhouette": 0.3602,
+      "inertia": 33150.4748
+    },
+    "5": {
+      "silhouette": 0.379,
+      "inertia": 28497.9702
+    },
+    "6": {
+      "silhouette": 0.3607,
+      "inertia": 24510.202
+    }
+  },
+  "D_k": 5
+}

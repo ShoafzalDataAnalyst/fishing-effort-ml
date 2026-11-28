@@ -1,0 +1,114 @@
+{
+  "A": {
+    "Set A (deployable)": {
+      "roc_auc": 0.7198668219739583,
+      "pr_auc": 0.5624786743118423,
+      "threshold": 0.2948197588001236,
+      "f1_default": 0.396,
+      "f1_tuned": 0.577
+    },
+    "Set B (+ hours, mmsi_present)": {
+      "roc_auc": 0.8963057922740443,
+      "pr_auc": 0.8226155918940582,
+      "threshold": 0.40149825641357584,
+      "f1_default": 0.747,
+      "f1_tuned": 0.757
+    }
+  },
+  "A_by_gear": {
+    "set_gillnets": 0.565,
+    "other_seines": 0.587,
+    "pole_and_line": 0.609,
+    "seiners": 0.611,
+    "trollers": 0.618,
+    "purse_seines": 0.622,
+    "drifting_longlines": 0.644,
+    "other_purse_seines": 0.687,
+    "set_longlines": 0.688,
+    "squid_jigger": 0.7,
+    "trawlers": 0.708,
+    "dredge_fishing": 0.713,
+    "fixed_gear": 0.719,
+    "tuna_purse_seines": 0.722,
+    "fishing": 0.726,
+    "pots_and_traps": 0.785
+  },
+  "B": {
+    "baseline": {
+      "rmse": 1.3302684801161933,
+      "mae": 1.0858060425120466,
+      "r2": -0.002021381684742085
+    },
+    "A": {
+      "rmse": 1.2145295894672672,
+      "mae": 0.9749041849643715,
+      "r2": 0.16475364896005718
+    },
+    "B": {
+      "rmse": 0.6463372855595303,
+      "mae": 0.4292243532431307,
+      "r2": 0.763453347169082
+    }
+  },
+  "B_share_all_fishing": 0.2017198136868506,
+  "two_part_spearman": {
+    "A": 0.3646951025777434,
+    "B": 0.6922237767019753
+  },
+  "C": {
+    "macro_f1": 0.3908287732511637,
+    "macro_f1_ci": [
+      0.3332717520891281,
+      0.48049685817749727
+    ],
+    "accuracy": 0.3696457356614616
+  },
+  "C_family": {
+    "macro_f1": 0.3887644547490823,
+    "accuracy": 0.40389087821625014,
+    "n_families": 12
+  },
+  "importance_top": {
+    "A": {
+      "mean_length_m": 0.0715,
+      "cell_ll_lon": 0.0616,
+      "log_n_vessels": 0.0472,
+      "abs_lat": 0.011,
+      "cell_ll_lat": 0.0103
+    },
+    "B": {
+      "log_n_vessels": 0.0676,
+      "cell_ll_lon": 0.0242,
+      "mean_length_m": 0.0148,
+      "geartype": 0.0133,
+      "abs_lat": 0.0115
+    },
+    "C": {
+      "cell_ll_lon": 0.2171,
+      "flag": 0.1953,
+      "cell_ll_lat": 0.1316,
+      "abs_lat": 0.1193,
+      "mmsi_present": 0.0292
+    }
+  },
+  "random_vs_block": {
+    "Random row split": {
+      "ROC-AUC": 0.7867,
+      "PR-AUC": 0.6214
+    },
+    "Geographic block split": {
+      "ROC-AUC": 0.6668,
+      "PR-AUC": 0.4737
+    }
+  },
+  "audit_lat": {
+    "South of 30\u00b0S": 0.669,
+    "30\u00b0S to 0\u00b0": 0.756,
+    "0\u00b0 to 30\u00b0N": 0.753,
+    "North of 30\u00b0N": 0.664
+  },
+  "audit_flag": {
+    "Known flag": 0.717,
+    "UNKNOWN flag": 0.67
+  }
+}
