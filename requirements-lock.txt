@@ -1,0 +1,9 @@
+# Exact versions used to train and test the models (made by src/pin_versions.py)
+pandas==3.0.5
+numpy==2.5.2
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+pyarrow==25.0.1
+plotly==7.0.0
+streamlit==1.62.0
